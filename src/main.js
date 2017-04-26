@@ -6,6 +6,7 @@ import router from './router'
 import store from './store/'
 import '../node_modules/uikit/dist/css/uikit.css'
 import '../node_modules/uikit/dist/js/uikit.js'
+import '../node_modules/font-awesome/css/font-awesome.css'
 
 Vue.config.productionTip = false
 

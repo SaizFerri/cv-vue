@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <app-layout></app-layout>
   </div>
 </template>
 
 <script>
+import AppLayout from './components/Layout'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    AppLayout
+  }
 }
 </script>
 

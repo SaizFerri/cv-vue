@@ -1,13 +1,13 @@
 <template>
   <div id="app-menu">
-    <div class="navbar-background">
+    <div class="navbar-background" uk-sticky-fixed uk-sticky="bottom: #top">
       <nav class="uk-container" uk-navbar>
         <div class="uk-navbar-left">
           <a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #offcanvas-slide" uk-navbar-toggle-icon></a>
           <ul class="uk-navbar-nav uk-visible@m">
-            <li><a><img class="profile-pic" src="../assets/perfil.jpg"></a></li>
-            <li class="uk-active"><a href="#">Resume</a></li>
-            <li><a href="#">Projects</a></li>
+            <router-link to="/" tag="li"><a><img class="profile-pic" src="../assets/perfil.jpg"></a></router-link>
+            <router-link to="/" tag="li" active-class="uk-active" exact><a>Resume</a></router-link>
+            <router-link to="/Projects/" tag="li" active-class="uk-active" exact><a>Projects</a></router-link>
           </ul>
         </div>
       </nav>
@@ -16,9 +16,9 @@
       <div class="uk-offcanvas-bar">
         <button class="uk-offcanvas-close" type="button" uk-close></button>
         <ul class="uk-nav uk-nav-default">
-          <li><a><img class="profile-pic-responsive" src="../assets/perfil.jpg"></a></li>
-          <li class="uk-active"><a>Resume</a></li>
-          <li><a>Projects</a></li>
+            <router-link to="/" tag="li"><a><img class="profile-pic-responsive" src="../assets/perfil.jpg"></a></router-link>
+            <router-link to="/" tag="li" active-class="uk-active" exact><a>Resume</a></router-link>
+            <router-link to="/Projects/" tag="li" active-class="uk-active" exact><a>Projects</a></router-link>
         </ul>
       </div>
     </div>
