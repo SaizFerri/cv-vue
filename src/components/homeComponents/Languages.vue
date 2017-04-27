@@ -6,7 +6,7 @@
         <span>{{ language.language }}</span>
       </strong>
       <div class="uk-width-2-3@l uk-width-1-3@m uk-width-1-1@s">
-        <strong><span>{{ language.skill }}</span></strong>
+        <span>{{ language.skill }}</span>
       </div>
     </div>
   </div>

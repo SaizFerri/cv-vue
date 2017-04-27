@@ -6,9 +6,9 @@
         <span>{{ job.years }}</span>
       </strong>
       <div class="uk-width-2-3@l uk-width-1-3@m uk-width-1-1@s">
-        <strong><span>{{ job.description }}</span></strong>
+        <span>{{ job.description }}</span>
         <div v-show="job.detail !== ''">
-          <ul>
+          <ul class="tasks">
             <li v-for="task in job.detail">{{ task.task }}</li>
           </ul>
         </div>
@@ -28,11 +28,14 @@ export default {
 </script>
 
 <style scoped>
-height: 2px; {
+h2 {
   margin: 20px 0 10px 0;
 }
 .remove-grid-margin {
   margin: 0 !important;
   padding: 10px;
+}
+.tasks li {
+  font-size: 12pt !important;
 }
 </style>

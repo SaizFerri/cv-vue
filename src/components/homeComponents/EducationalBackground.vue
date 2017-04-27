@@ -6,7 +6,7 @@
         <span>{{ education.years }}</span>
       </strong>
       <div class="uk-width-2-3@l uk-width-1-3@m uk-width-1-1@s">
-        <strong><span>{{ education.description }}</span></strong>
+        <span>{{ education.description }}</span>
       </div>
     </div>
   </div>
