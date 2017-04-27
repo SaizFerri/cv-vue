@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Work Experience</h3>
+    <h2>Work Experience</h2><hr>
     <div v-for="job in workExperience" class="remove-grid-margin" uk-grid>
       <strong class="uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
         <span>{{ job.years }}</span>
@@ -28,8 +28,8 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  margin-bottom: 10px;
+height: 2px; {
+  margin: 20px 0 10px 0;
 }
 .remove-grid-margin {
   margin: 0 !important;

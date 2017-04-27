@@ -5,9 +5,9 @@
         <div class="uk-navbar-left">
           <a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #offcanvas-slide" uk-navbar-toggle-icon></a>
           <ul class="uk-navbar-nav uk-visible@m">
-            <router-link to="/" tag="li"><a><img class="profile-pic" src="../assets/perfil.jpg"></a></router-link>
-            <router-link to="/" tag="li" active-class="uk-active" exact><a>Resume</a></router-link>
-            <router-link to="/Projects/" tag="li" active-class="uk-active" exact><a>Projects</a></router-link>
+            <router-link to="/" tag="li"><a><img class="profile-pic" src="../../assets/perfil.jpg"></a></router-link>
+            <router-link to="/" tag="li" active-class="uk-active" exact><a class="menu-link">Resume</a></router-link>
+            <router-link to="/Projects/" tag="li" active-class="uk-active" exact><a class="menu-link">Projects</a></router-link>
           </ul>
         </div>
       </nav>
@@ -16,7 +16,7 @@
       <div class="uk-offcanvas-bar">
         <button class="uk-offcanvas-close" type="button" uk-close></button>
         <ul class="uk-nav uk-nav-default">
-            <router-link to="/" tag="li"><a><img class="profile-pic-responsive" src="../assets/perfil.jpg"></a></router-link>
+            <router-link to="/" tag="li"><a><img class="profile-pic-responsive" src="../../assets/perfil.jpg"></a></router-link>
             <router-link to="/" tag="li" active-class="uk-active" exact><a>Resume</a></router-link>
             <router-link to="/Projects/" tag="li" active-class="uk-active" exact><a>Projects</a></router-link>
         </ul>
@@ -51,7 +51,7 @@ export default {
 .uk-offcanvas-bar {
   text-align: center;
 }
-
-
-
+.menu-link:hover {
+  background-color: #cccccc;
+}
 </style>

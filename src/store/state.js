@@ -35,5 +35,42 @@ export default {
       description: 'German-Spanish translator for internet websites',
       detail: ''
     }
+  ],
+  educationalBackground: [
+    {
+      id: 1,
+      years: '2016 - present',
+      description: 'Currently studying Applied Informatics at the „University of applied sciences “, Berlin'
+    },
+    {
+      id: 2,
+      years: '2015 - 2016',
+      description: 'Computer engineering at the „University of applied sciences “, Berlin'
+    },
+    {
+      id: 3,
+      years: '2012 - 2015',
+      description: 'High school “Friedensburg Oberschule” (Berlin State bilingual High school German-Spanish)'
+    }
+  ],
+  languages: [
+    {
+      id: 1,
+      language: 'Spanish',
+      skill: 'Mother Tonge'
+    },
+    {
+      id: 2,
+      language: 'German',
+      skill: 'Fluent written and spoken'
+    },
+    {
+      id: 3,
+      language: 'English',
+      skill: 'Fluent written and spoken'
+    }
+  ],
+  programmingSkills: [
+
   ]
 }

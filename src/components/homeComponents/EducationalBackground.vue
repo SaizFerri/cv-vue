@@ -1,0 +1,33 @@
+<template>
+  <div>
+    <h2>Educational Background</h2><hr>
+    <div v-for="education in educationalBackground" class="remove-grid-margin" uk-grid>
+      <strong class="uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
+        <span>{{ education.years }}</span>
+      </strong>
+      <div class="uk-width-2-3@l uk-width-1-3@m uk-width-1-1@s">
+        <strong><span>{{ education.description }}</span></strong>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapState } from 'vuex'
+export default {
+  name: 'app-educational-background',
+  computed: {
+    ...mapState(['educationalBackground'])
+  }
+}
+</script>
+
+<style scoped>
+h2 {
+  margin: 20px 0 10px 0;
+}
+.remove-grid-margin {
+  margin: 0 !important;
+  padding: 10px;
+}
+</style>
