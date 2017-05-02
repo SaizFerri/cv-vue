@@ -14,7 +14,7 @@ export default new Router({
       component: AppHome
     },
     {
-      path: '/Projects/',
+      path: '/projects',
       name: 'Projects',
       component: AppProjects
     }

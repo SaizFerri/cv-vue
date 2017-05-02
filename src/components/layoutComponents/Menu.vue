@@ -1,6 +1,6 @@
 <template>
   <div id="app-menu">
-    <div class="navbar-background" uk-sticky-fixed uk-sticky="bottom: #top">
+    <div class="navbar-background">
       <nav class="uk-container" uk-navbar>
         <div class="uk-navbar-left">
           <a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #offcanvas-slide" uk-navbar-toggle-icon></a>
@@ -13,7 +13,7 @@
         <div class="uk-navbar-right">
           <ul class="uk-navbar-nav uk-visible@m">
             <router-link to="/" tag="li" active-class="uk-active" exact><a class="menu-link">Resume</a></router-link>
-            <router-link to="/Projects/" tag="li" active-class="uk-active" exact><a class="menu-link">Projects</a></router-link>
+            <router-link to="/projects" tag="li" active-class="uk-active" exact><a class="menu-link">Projects</a></router-link>
           </ul>
         </div>
       </nav>
@@ -24,7 +24,7 @@
         <ul class="uk-nav uk-nav-default">
             <router-link to="/" tag="li"><a><img class="profile-pic-responsive" src="../../assets/perfil.jpg"></a></router-link>
             <router-link to="/" tag="li" active-class="uk-active" exact><a>Resume</a></router-link>
-            <router-link to="/Projects/" tag="li" active-class="uk-active" exact><a>Projects</a></router-link>
+            <router-link to="/projects" tag="li" active-class="uk-active" exact><a>Projects</a></router-link>
         </ul>
       </div>
     </div>
