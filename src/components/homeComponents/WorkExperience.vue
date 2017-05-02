@@ -28,14 +28,14 @@ export default {
 </script>
 
 <style scoped>
-h2 {
-  margin: 20px 0 10px 0;
-}
-.remove-grid-margin {
-  margin: 0 !important;
-  padding: 10px;
-}
-.tasks li {
-  font-size: 12pt !important;
-}
+  h2 {
+    margin: 20px 0 10px 0;
+  }
+  .remove-grid-margin {
+    margin: 0 !important;
+    padding: 10px;
+  }
+  .tasks li {
+    font-size: 12pt !important;
+  }
 </style>

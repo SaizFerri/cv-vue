@@ -4,8 +4,14 @@
       <nav class="uk-container" uk-navbar>
         <div class="uk-navbar-left">
           <a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #offcanvas-slide" uk-navbar-toggle-icon></a>
+          <span class="uk-hidden@m my-name-responsive">ADRIAN SAIZ</span>
           <ul class="uk-navbar-nav uk-visible@m">
             <router-link to="/" tag="li"><a><img class="profile-pic" src="../../assets/perfil.jpg"></a></router-link>
+            <router-link to="/" tag="li"><a class="uk-visible@s my-name">Adrian Saiz</a></router-link>
+          </ul>
+        </div>
+        <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav uk-visible@m">
             <router-link to="/" tag="li" active-class="uk-active" exact><a class="menu-link">Resume</a></router-link>
             <router-link to="/Projects/" tag="li" active-class="uk-active" exact><a class="menu-link">Projects</a></router-link>
           </ul>
@@ -33,8 +39,8 @@ export default {
 
 <style scoped>
 .profile-pic {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height:60px;
   border-radius: 50%;
 }
 
@@ -51,7 +57,28 @@ export default {
 .uk-offcanvas-bar {
   text-align: center;
 }
+
+.menu-link {
+
+}
+
 .menu-link:hover {
   background-color: #cccccc;
+}
+
+.my-name {
+  text-decoration: none;
+  color: black !important;
+  font-size: 14pt;
+}
+
+.my-name:hover {
+  background-color: #EEF1EF;
+}
+
+.my-name-responsive {
+  padding: 10px;
+  font-size: 14pt;
+  color: black !important;
 }
 </style>

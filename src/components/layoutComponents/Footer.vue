@@ -19,20 +19,20 @@ export default {
 </script>
 
 <style scoped>
-.footer {
-  background-color: #eef1ef;
-}
-.wrapper {
-  padding: 5px;
-}
-.right-icons {
-  float: right;
-}
-.right-icons i {
-  padding: 0 10px 0 0;
-  color: black;
-}
-.right-icons i:hover {
-  color: grey;
-}
+  .footer {
+    background-color: #eef1ef;
+  }
+  .wrapper {
+    padding: 5px;
+  }
+  .right-icons {
+    float: right;
+  }
+  .right-icons i {
+    padding: 0 10px 0 0;
+    color: black;
+  }
+  .right-icons i:hover {
+    color: grey;
+  }
 </style>

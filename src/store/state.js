@@ -86,5 +86,8 @@ export default {
       label: 'Other',
       languages: 'Linux, Git, MySQL, Postgresql, npm, Bower, Grunt, Gulp, JSON'
     }
+  ],
+  projects: [
+
   ]
 }
