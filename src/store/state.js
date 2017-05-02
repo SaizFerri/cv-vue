@@ -1,6 +1,6 @@
 export default {
   workExperience: [
-    {
+    /* {
       id: 1,
       years: '05/2017 - present',
       description: 'Front-end developer by click Solutions GmbH',
@@ -15,7 +15,7 @@ export default {
           task: 'Using Foundation as CSS framework'
         }
       ]
-    },
+    }, */
     {
       id: 2,
       years: '11/2015 - 04/2017',
@@ -71,6 +71,20 @@ export default {
     }
   ],
   programmingSkills: [
-
+    {
+      id: 1,
+      label: 'Frontend',
+      languages: 'Html, CSS, Javascript, Vue, Vuex, Bootstrap, jQuery, Less, Sass'
+    },
+    {
+      id: 2,
+      label: 'Backend',
+      languages: 'Java, PHP'
+    },
+    {
+      id: 3,
+      label: 'Other',
+      languages: 'Linux, Git, MySQL, Postgresql, npm, Bower, Grunt, Gulp, JSON'
+    }
   ]
 }
