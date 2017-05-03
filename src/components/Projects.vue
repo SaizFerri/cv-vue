@@ -1,12 +1,12 @@
 <template>
-  <div id="app-projects">
-    <div v-if="projects.length === 0" class="uk-flex uk-flex-center spinner-container">
+  <div id="app-projects margin-top">
+    <div v-if="projects.length === 0" class="uk-flex uk-flex-center spinner-container margin-top">
       <div uk-spinner class="uk-spinner uk-icon"></div>
     </div>
     <div v-if="projects.length === 0" class="uk-flex uk-flex-center spinner-container">
       <span>Retriving the projects</span>
     </div>
-    <table v-if="projects.length > 0" class="uk-table uk-table-striped">
+    <table v-if="projects.length > 0" class="uk-table uk-table-striped margin-top">
       <thead>
         <tr>
           <th>Project Name</th>
@@ -42,6 +42,9 @@
 </script>
 
 <style scoped>
+  .margin-top {
+    margin-top: 90px;
+  }
   .spinner-container {
     padding: 20px;
   }

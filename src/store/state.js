@@ -1,21 +1,21 @@
 export default {
   workExperience: [
-    /* {
+    {
       id: 1,
       years: '05/2017 - present',
-      description: 'Front-end developer by click Solutions GmbH',
+      description: 'Frontend developer by click Solutions GmbH',
       detail: [
         {
           task: 'Developing the front-end side of web applications with Javascript'
         },
         {
-          task: 'Using EmberJs as the main Javascript framework'
+          task: 'Using Foundation as CSS framework'
         },
         {
-          task: 'Using Foundation as CSS framework'
+          task: 'Developing newsletters with Foundation emails'
         }
       ]
-    }, */
+    },
     {
       id: 2,
       years: '11/2015 - 04/2017',
