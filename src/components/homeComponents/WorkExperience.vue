@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-work-experience margin-top">
     <h2>Work Experience</h2><hr>
     <div v-for="job in workExperience" class="remove-grid-margin" uk-grid>
       <strong class="uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
@@ -28,6 +28,9 @@ export default {
 </script>
 
 <style scoped>
+  .margin-top {
+    margin-top: 100px;
+  }
   h2 {
     margin: 20px 0 10px 0;
   }

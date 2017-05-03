@@ -1,6 +1,6 @@
 <template>
   <div id="app-menu">
-    <div class="navbar-background">
+    <div class="navbar-background fixed">
       <nav class="uk-container" uk-navbar>
         <div class="uk-navbar-left">
           <a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #offcanvas-slide" uk-navbar-toggle-icon></a>
@@ -38,47 +38,52 @@ export default {
 </script>
 
 <style scoped>
-.profile-pic {
-  width: 60px;
-  height:60px;
-  border-radius: 50%;
-}
+  .fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  .profile-pic {
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+  }
 
-.profile-pic-responsive {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
+  .profile-pic-responsive {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
 
-.navbar-background {
-  background-color: #EEF1EF;
-}
+  .navbar-background {
+    background-color: #EEF1EF;
+  }
 
-.uk-offcanvas-bar {
-  text-align: center;
-}
+  .uk-offcanvas-bar {
+    text-align: center;
+  }
 
-.menu-link {
+  .menu-link {
 
-}
+  }
 
-.menu-link:hover {
-  background-color: #cccccc;
-}
+  .menu-link:hover {
+    background-color: #cccccc;
+  }
 
-.my-name {
-  text-decoration: none;
-  color: black !important;
-  font-size: 14pt;
-}
+  .my-name {
+    text-decoration: none;
+    color: black !important;
+    font-size: 14pt;
+  }
 
-.my-name:hover {
-  background-color: #EEF1EF;
-}
+  .my-name:hover {
+    background-color: #EEF1EF;
+  }
 
-.my-name-responsive {
-  padding: 10px;
-  font-size: 14pt;
-  color: black !important;
-}
+  .my-name-responsive {
+    padding: 10px;
+    font-size: 14pt;
+    color: black !important;
+  }
 </style>
