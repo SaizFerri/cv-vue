@@ -114,13 +114,13 @@ export default {
         description: 'Desarrollador de Frontend en click Solutions GmbH',
         detail: [
           {
-            task: 'Desarrollando aplicaciones web con javascript'
+            task: 'Desarrollador de aplicaciones web con JavaScript'
           },
           {
-            task: 'Empleando Foundation como Framework para CSS'
+            task: 'Uso de Foundation como Framework para CSS'
           },
           {
-            task: 'Desarrollando Newsletter con Foundation emails'
+            task: 'Desarrollador de Newsletter con Foundation Emails'
           }
         ]
       },

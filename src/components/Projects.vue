@@ -17,7 +17,7 @@
       <tbody>
         <tr v-for="project in projects">
           <td>{{ project.name }}</td>
-          <td>{{ project.updated_at | formatDate }}</td>
+          <td>{{ project.pushed_at | formatDate }}</td>
           <td><a :href="project.html_url"><i class="fa fa-code"></i></a></td>
         </tr>
       </tbody>
