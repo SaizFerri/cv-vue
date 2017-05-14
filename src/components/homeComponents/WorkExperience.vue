@@ -1,34 +1,16 @@
 <template>
   <div class="app-work-experience margin-top">
-    <div v-if="selectedLanguage.english">
-      <h2>{{ english.titles.work }}</h2><hr>
-      <div v-for="job in english.workExperience" class="remove-grid-margin" uk-grid>
-        <strong class="uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
-          <span>{{ job.years }}</span>
-        </strong>
-        <div class="uk-width-2-3@l uk-width-1-3@m uk-width-1-1@s">
-          <span>{{ job.description }}</span>
-          <div v-show="job.detail !== ''">
-            <ul class="tasks">
-              <li v-for="task in job.detail">{{ task.task }}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div v-if="selectedLanguage.spanish">
-      <h2>{{ spanish.titles.work }}</h2><hr>
-      <div v-for="job in spanish.workExperience" class="remove-grid-margin" uk-grid>
-        <strong class="uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
-          <span>{{ job.years }}</span>
-        </strong>
-        <div class="uk-width-2-3@l uk-width-1-3@m uk-width-1-1@s">
-          <span>{{ job.description }}</span>
-          <div v-show="job.detail !== ''">
-            <ul class="tasks">
-              <li v-for="task in job.detail">{{ task.task }}</li>
-            </ul>
-          </div>
+    <h2>{{ language.titles.work }}</h2><hr>
+    <div v-for="job in language.workExperience" class="remove-grid-margin" uk-grid>
+      <strong class="uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
+        <span>{{ job.years }}</span>
+      </strong>
+      <div class="uk-width-2-3@l uk-width-1-3@m uk-width-1-1@s">
+        <span>{{ job.description }}</span>
+        <div v-show="job.detail !== ''">
+          <ul class="tasks">
+            <li v-for="task in job.detail">{{ task.task }}</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -40,7 +22,10 @@ import { mapState } from 'vuex'
 export default {
   name: 'app-work-experience',
   computed: {
-    ...mapState(['selectedLanguage', 'english', 'spanish'])
+    ...mapState(['selectedLanguage', 'displayLanguages']),
+    language () {
+      return this.displayLanguages[this.selectedLanguage]
+    }
   }
 }
 </script>

@@ -1,25 +1,12 @@
 <template>
   <div>
-    <div v-if="selectedLanguage.english">
-      <h2>{{ english.titles.education }}</h2><hr>
-      <div v-for="education in english.educationalBackground" class="remove-grid-margin" uk-grid>
-        <strong class="uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
-          <span>{{ education.years }}</span>
-        </strong>
-        <div class="uk-width-2-3@l uk-width-1-3@m uk-width-1-1@s">
-          <span>{{ education.description }}</span>
-        </div>
-      </div>
-    </div>
-    <div v-if="selectedLanguage.spanish">
-      <h2>{{ spanish.titles.education }}</h2><hr>
-      <div v-for="education in spanish.educationalBackground" class="remove-grid-margin" uk-grid>
-        <strong class="uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
-          <span>{{ education.years }}</span>
-        </strong>
-        <div class="uk-width-2-3@l uk-width-1-3@m uk-width-1-1@s">
-          <span>{{ education.description }}</span>
-        </div>
+    <h2>{{ language.titles.education }}</h2><hr>
+    <div v-for="education in language.educationalBackground" class="remove-grid-margin" uk-grid>
+      <strong class="uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
+        <span>{{ education.years }}</span>
+      </strong>
+      <div class="uk-width-2-3@l uk-width-1-3@m uk-width-1-1@s">
+        <span>{{ education.description }}</span>
       </div>
     </div>
   </div>
@@ -30,7 +17,10 @@ import { mapState } from 'vuex'
 export default {
   name: 'app-educational-background',
   computed: {
-    ...mapState(['selectedLanguage', 'english', 'spanish'])
+    ...mapState(['selectedLanguage', 'displayLanguages']),
+    language () {
+      return this.displayLanguages[this.selectedLanguage]
+    }
   }
 }
 </script>

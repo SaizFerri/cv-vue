@@ -6,17 +6,9 @@ export default {
   },
   changeLanguage (state, data) {
     if (data.data === 'English') {
-      state.selectedLanguage = {
-        ...state.selectedLanguage,
-        english: true,
-        spanish: false
-      }
+      state.selectedLanguage = 'english'
     } else if (data.data === 'Spanish') {
-      state.selectedLanguage = {
-        ...state.selectedLanguage,
-        english: false,
-        spanish: true
-      }
+      state.selectedLanguage = 'spanish'
     }
   }
 }

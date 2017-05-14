@@ -12,15 +12,15 @@
         </div>
         <div class="uk-navbar-right">
           <ul class="uk-navbar-nav uk-visible@m">
-            <router-link to="/" tag="li" active-class="uk-active" exact><a class="menu-link" v-if="selectedLanguage.english">Resume</a><a v-if="selectedLanguage.spanish">Curriculum</a></router-link>
-            <router-link to="/projects" tag="li" active-class="uk-active" exact><a class="menu-link" v-if="selectedLanguage.english">Projects</a><a v-if="selectedLanguage.spanish">Proyectos</a></router-link>
+            <router-link to="/" tag="li" active-class="uk-active" exact><a class="menu-link" v-if="selectedLanguage == 'english'">Resume</a><a v-if="selectedLanguage == 'spanish'">Curriculum</a></router-link>
+            <router-link to="/projects" tag="li" active-class="uk-active" exact><a class="menu-link" v-if="selectedLanguage == 'english'">Projects</a><a v-if="selectedLanguage == 'spanish'">Proyectos</a></router-link>
             <li class="uk-active">
-              <a href="#" v-if="selectedLanguage.english">Language</a>
-              <a href="#" v-if="selectedLanguage.spanish">Idiomas</a>
+              <a href="#" v-if="selectedLanguage == 'english'">Language</a>
+              <a href="#" v-if="selectedLanguage == 'spanish'">Idiomas</a>
               <div class="uk-navbar-dropdown">
                 <ul class="uk-nav uk-navbar-dropdown-nav" >
-                  <li :class="{'uk-active': selectedLanguage.english}" @click="changeLanguage(english)"><a href="#">{{ english }}</a></li>
-                  <li :class="{'uk-active': selectedLanguage.spanish}" @click="changeLanguage(spanish)"><a href="#">{{ spanish }}</a></li>
+                  <li :class="{'uk-active': selectedLanguage == 'english'}" @click="changeLanguage(english)"><a href="#">{{ english }}</a></li>
+                  <li :class="{'uk-active': selectedLanguage == 'spanish'}" @click="changeLanguage(spanish)"><a href="#">{{ spanish }}</a></li>
                 </ul>
               </div>
             </li>
@@ -33,15 +33,15 @@
         <button class="uk-offcanvas-close" type="button" uk-close></button>
         <ul class="uk-nav uk-nav-default">
             <router-link to="/" tag="li"><a><img class="profile-pic-responsive" src="../../assets/perfil.jpg"></a></router-link>
-            <router-link to="/" tag="li" active-class="uk-active" exact><a v-if="selectedLanguage.english">Resume</a><a v-if="selectedLanguage.spanish">Curriculum</a></router-link>
-            <router-link to="/projects" tag="li" active-class="uk-active" exact><a v-if="selectedLanguage.english">Projects</a><a v-if="selectedLanguage.spanish">Proyectos</a></router-link>
+            <router-link to="/" tag="li" active-class="uk-active" exact><a v-if="selectedLanguage == 'english'">Resume</a><a v-if="selectedLanguage == 'spanish'">Curriculum</a></router-link>
+            <router-link to="/projects" tag="li" active-class="uk-active" exact><a v-if="selectedLanguage == 'english'">Projects</a><a v-if="selectedLanguage == 'spanish'">Proyectos</a></router-link>
             <li class="uk-nav-divider"></li>
             <li class="uk-parent uk-nav">
-              <span v-if="selectedLanguage.english">Language</span>
-              <span v-if="selectedLanguage.spanish">Idiomas</span>
-              <ul class="uk-nav-sub">
-                <li :class="{'uk-active': selectedLanguage.english}" @click="changeLanguage(english)"><a href="#">{{ english }}</a></li>
-                <li :class="{'uk-active': selectedLanguage.spanish}" @click="changeLanguage(spanish)"><a href="#">{{ spanish }}</a></li>
+              <span v-if="selectedLanguage == 'english'">Language</span>
+              <span v-if="selectedLanguage == 'spanish'">Idiomas</span>
+              <ul class="uk-nav-sub remove-left-padding">
+                <li :class="{'uk-active': selectedLanguage == 'english'}" @click="changeLanguage(english)"><a href="#">{{ english }}</a></li>
+                <li :class="{'uk-active': selectedLanguage == 'spanish'}" @click="changeLanguage(spanish)"><a href="#">{{ spanish }}</a></li>
               </ul>
             </li>
         </ul>
@@ -62,7 +62,10 @@ export default {
     }
   },
   computed: {
-    ...mapState(['selectedLanguage'])
+    ...mapState(['selectedLanguage', 'displayLanguages']),
+    language () {
+      return this.displayLanguages[this.selectedLanguage]
+    }
   },
   methods: {
     changeLanguage (data) {
@@ -123,5 +126,9 @@ export default {
     padding: 10px;
     font-size: 14pt;
     color: black !important;
+  }
+
+  .remove-left-padding {
+    padding-left: 0px;
   }
 </style>
