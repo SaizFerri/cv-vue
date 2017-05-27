@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import VueAnalytics from 'vue-analytics'
 import AppHome from '@/components/Home'
 import AppProjects from '@/components/Projects'
 
-Vue.use(Router)
-
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [
     {
@@ -20,3 +19,11 @@ export default new Router({
     }
   ]
 })
+
+Vue.use(VueAnalytics, {
+  id: 'UA-99826313-1',
+  router
+})
+
+Vue.use(Router)
+export default router

@@ -104,10 +104,6 @@ export default {
     text-align: center;
   }
 
-  .menu-link {
-
-  }
-
   .menu-link:hover {
     background-color: #cccccc;
   }
